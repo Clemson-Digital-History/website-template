@@ -1,0 +1,28 @@
+{{ define "main" }}
+
+{{ $truncate := default true .Site.Params.truncate }}
+
+{{ if .Content }}
+<header>
+
+</header>
+<section>
+  <div class="container col-xxl-12 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-5">
+        <img src="https://placedog.net/500/500" class="rounded-circle d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="400" height="400" loading="lazy">
+      </div>
+      <div class="col-lg-7">
+        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">{{ .Site.Params.scholar.name}}</h1>
+        <p class="lead">{{ .Content }}<p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
+          <button type="button" class="btn btn-outline-secondary btn-lg px-4">Default</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+{{ end }}
+
+{{ end }}
